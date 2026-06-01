@@ -29,9 +29,9 @@ def invoke_model(messages):
     body = {
         "anthropic_version": "bedrock-2023-05-31",
         "max_tokens": 500,
-        "system": system_prompt,  # <--- AQUÍ inyectamos la restricción estricta
+        "system": system_prompt, 
         "messages": messages,
-        "temperature": 0.1        # Temperatura baja para que sea estricto con las reglas
+        "temperature": 0.1
     }
 
     response = bedrock.invoke_model(
